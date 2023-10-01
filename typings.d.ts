@@ -1,5 +1,6 @@
 declare module 'react-native-ico-supraicons' {
     import { ReactNode } from 'react';
+    import { SvgProps, AdditionalProps } from 'react-native-svg';
 
     type iconNames = 'a-minus-test-symbol' |
       'a-plus-symbol' |
@@ -277,7 +278,7 @@ declare module 'react-native-ico-supraicons' {
       badge?: number | string | badgeTypeObj;
     }
 
-    const Icon: (props: IconProps) => ReactNode;
+    const Icon: (props: IconProps & SvgProps & AdditionalProps) => ReactNode;
 
     export { iconNames };
     export default Icon;
